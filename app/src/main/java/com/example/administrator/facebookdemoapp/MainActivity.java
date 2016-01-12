@@ -51,31 +51,6 @@ public class MainActivity extends ActionBarActivity {
         public void onSuccess(LoginResult loginResult) {
 
 
-//            AccessToken accessToken = loginResult.getAccessToken();
-//            Profile.fetchProfileForCurrentAccessToken();
-//            Profile profile = Profile.getCurrentProfile();
-////            Profile profile = Profile.fetchProfileForCurrentAccessToken();
-//            displayMessage(profile);
-
-
-//            private Session.StatusCallback callback = new Session.StatusCallback() {
-//                @Override
-//                public void call(Session session, SessionState state,
-//                                 Exception exception) {
-//                    onSessionStateChange(session, state, exception);
-//
-//                    if (session.isOpened()) {
-//                        Log.i(TAG,"Access Token"+ session.getAccessToken());
-//                        Request.newMeRequest(session,
-//                                new Request.GraphUserCallback() {
-//                                    @Override
-//                                    public void onCompleted(GraphUser user,Response response) {
-//
-//                                    }
-//                                });
-
-
-
             // App code
             GraphRequest request = GraphRequest.newMeRequest(
                     loginResult.getAccessToken(),
@@ -252,28 +227,4 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
-
-
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
 }
